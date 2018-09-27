@@ -1,0 +1,28 @@
+[33mcommit 9e17689c9831c6e25ed3b9cf81a8436807f45dd0[m
+Author: Manoj Surudwad <manoj.surudwad@coriolis.co.in>
+Date:   Thu Sep 27 16:07:03 2018 +0530
+
+    first
+
+ .gitlab-ci.yml | 25 [32m+++++++++++++++++++++++++[m
+ 1 file changed, 25 insertions(+)
+
+[33mcommit bc80e979166d3a0655bd8abd170a42f7335293e2[m
+Author: Manoj Surudwad <manoj.surudwad@coriolis.co.in>
+Date:   Thu Sep 27 16:06:17 2018 +0530
+
+    first
+
+ .helmignore               | 21 [32m+++++++++++++++++++++[m
+ Chart.yaml                |  5 [32m+++++[m
+ Dockerfile                |  6 [32m++++++[m
+ server.js                 | 11 [32m+++++++++++[m
+ templates/NOTES.txt       | 19 [32m+++++++++++++++++++[m
+ templates/_helpers.tpl    | 32 [32m++++++++++++++++++++++++++++++++[m
+ templates/deployment.yaml | 26 [32m++++++++++++++++++++++++++[m
+ templates/ingress.yaml    | 21 [32m+++++++++++++++++++++[m
+ templates/namespace.yaml  |  6 [32m++++++[m
+ templates/secret.yaml     |  8 [32m++++++++[m
+ templates/service.yaml    | 17 [32m+++++++++++++++++[m
+ values.yaml               | 48 [32m++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 12 files changed, 220 insertions(+)
