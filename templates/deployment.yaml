@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-deploy
+  namespace: elk
+  labels:
+    app: hello-helm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-helm
+  template:
+    metadata:
+      name: hello-helm
+      labels:
+        app: hello-helm
+    spec:
+      imagePullSecrets: 
+       - name: mysec
+      containers:
+      - name: hello-helm
+        image: manojs97/hello-node:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080

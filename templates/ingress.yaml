@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-ingress
+  namespace: elk 
+  labels:
+    app: hello-helm
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 8000
+  rules:
+  - host: myminikube.info
+    http:
+      paths:
+      - path: /hello/
+        backend:
+          serviceName: hello-svce 
+          servicePort: 8080
